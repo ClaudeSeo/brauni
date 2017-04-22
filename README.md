@@ -1,7 +1,7 @@
 # brauni
 markdown editor with vuejs &amp; nuxt
 
-## Build
+## Usage
 ```bash
 # install dependencies
 $ yarn

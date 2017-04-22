@@ -12,9 +12,6 @@ body {
   padding: 0 !important;
   margin: 0;
 }
-.w-50 {
-  width: 50%;
-}
 .float-left {
   float: left;
 }

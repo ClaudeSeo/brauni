@@ -1,12 +1,12 @@
 <template>
   <div class="contents">
-    <div class="editor w-50 float-left">
+    <div class="editor col float-left">
       <div class="header">
         <p class="title">Editor <span class="float-right save" @click="saveAs">Save as</span></p>
       </div>
       <textarea ref='codemirror'></textarea>
     </div>
-    <div class="preview w-50 float-left">
+    <div class="preview col float-left">
       <div class="header bl-0">
         <p class="title">Preview</p>
       </div>
@@ -69,8 +69,11 @@ export default {
 }
 </script>
 <style scoped>
-.preview-content {
-  padding: 15px;
+textarea {
+  display: none;
+}
+.col {
+  width: 50%;
 }
 .save {
   font-size: 0.7rem;
@@ -79,7 +82,21 @@ export default {
 .editor {
   height: calc(100vh - 172px);
 }
-textarea {
-  display: none;
+.preview-content {
+  padding: 15px;
+}
+@media screen and (max-width: 768px) {
+  .col {
+    width: 100%;
+  }
+  .editor {
+    height: 100%;
+  }
+  .preview {
+    margin-top: 1rem;
+  }
+  .preview-content {
+    padding: 0 15px;
+  }
 }
 </style>

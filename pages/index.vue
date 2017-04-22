@@ -29,7 +29,7 @@ export default {
 input {
   width: 100%;
   border: 0;
-  padding: 0 16px;
+  padding-left: 16px;
   margin-bottom: 0.8rem;
 }
 input:focus {

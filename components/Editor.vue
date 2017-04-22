@@ -1,5 +1,5 @@
 <template>
-  <div class="previewer">
+  <div class="contents">
     <div class="editor w-50 float-left">
       <div class="header">
         <p class="title">Editor <span class="float-right save" @click="saveAs">Save as</span></p>
@@ -35,7 +35,7 @@ if (process.BROWSER_BUILD) {
 }
 
 export default {
-  name: 'previewer',
+  name: 'editor',
   data () {
     return {
       code: '# Brauni\nmarkdown editor with vuejs & nuxt',

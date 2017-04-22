@@ -2,16 +2,16 @@
   <section class="container">
     <p class="title">DOCUMENT NAME</p>
     <input type="text" v-model="fileName">
-    <previewer/>
+    <editor />
   </section>
 </template>
 
 <script>
-import Previewer from '~components/Previewer.vue'
+import Editor from '~components/Editor.vue'
 
 export default {
   components: {
-    Previewer
+    Editor
   },
   computed: {
     fileName: {

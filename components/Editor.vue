@@ -52,6 +52,7 @@ export default {
     }
   },
   mounted () {
+    this.code = window.sessionStorage.getItem('code') || '# Brauni\nmarkdown editor with vuejs & nuxt'
     this.preview = marked(this.code)
     this.editor = window.CodeMirror.fromTextArea(this.$refs.codemirror, this.editorOptions)
     this.editor.setValue(this.code)
@@ -64,6 +65,11 @@ export default {
     saveAs () {
       const blob = new Blob([this.code], {type: 'text/plain;charset=utf-8'})
       FileSaver.saveAs(blob, this.$store.state.fileName)
+    }
+  },
+  watch: {
+    code (val) {
+      window.sessionStorage.setItem('code', val)
     }
   }
 }
